@@ -1,9 +1,14 @@
 ---
 import "../styles/global.css";
 ---
-<div class="w-full h-screen py-3.5">
+<div class="w-full h-screen py-3.5 flex flex-col">
   <header class="flex justify-center w-full border p-2">
     <span class="text-4xl text-emerald-600">Hola</span>
   </header>
-  <slot/>
+  <div class="flex-1">
+    <slot/>
+  </div>
+  <footer>
+    <p>&copy; 2026 Todos los derechos reservados.</p>
+  </footer>
 </div>
