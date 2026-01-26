@@ -1,14 +1,16 @@
 ---
 import "../styles/global.css";
+import Sidebar from "../components/sidebar.astro";
 ---
 <div class="w-full h-screen py-3.5 flex flex-col">
   <header class="flex justify-center w-full border p-2">
     <span class="text-4xl text-emerald-600">Hola</span>
   </header>
-  <div class="flex-1">
+  <div class="flex-1 flex">
+    <Sidebar title="Menu"/>
     <slot/>
   </div>
-  <footer>
+  <footer class="h-fit py-4 flex justify-center">
     <p>&copy; 2026 Todos los derechos reservados.</p>
   </footer>
 </div>
