@@ -10,12 +10,11 @@ interface Props{
 const {title,links} = Astro.props;
 let visible = false;
 ---
-<aside class=`w-[${visible?0:"fit"}] border px-4 py-2`>
-  <div>
-    <h2>{title}</h2>
-  </div>
-  <nav>
-    <ul>
+<aside id="sbContainer" class=`w-[${visible?"64":"0"}] overflow-hidden border px-1 py-2`>
+  <div class="h-full flex items-center gap-0">
+    <h2>{visible?title:""}</h2>
+    <nav>
+      <ul>
         { links&&
           links.map(link=>{
             return <li>
@@ -25,5 +24,18 @@ let visible = false;
         }
     </ul>
   </nav>
+  <div>
+    <button id="sidebarShowBtn" class="hover:cursor-pointer">&gt;</button>
+  </div>
+  </div>
 </aside>
-<script>
+<script >
+  const sbarShowbtn = document.getElementById("sidebarShowBtn");
+  const sbCont = document.getElementById("sbContainer");
+  let isVisible = false;
+  sbarShowbtn?.addEventListener(()=>{
+    sbCont.className = isVisible?"bg-red-500":"bg-green-500";
+    isVisible=!isVisible;
+    console.log("click");
+  })
+</script>
