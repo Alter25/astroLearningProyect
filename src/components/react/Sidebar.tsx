@@ -18,7 +18,7 @@ function VisibleButton({
   return (
     <div className="h-full">
       <button
-        className="text-2xl text-emerald-500 h-full hover:cursor-pointer border"
+        className="text-sm text-emerald-200 bg-purple-700 h-full hover:cursor-pointer border"
         onClick={f}
       >
         {children}
@@ -38,7 +38,7 @@ export default function Sidebar({ title, links }: Props) {
   };
 
   return (
-    <aside className="w-fit h-full border">
+    <aside className="w-fit h-full bg-purple-950 border">
       {isVisible ? (
         <div className="h-full w-50 flex justify-end">
           <nav className="mx-auto mt-4">
