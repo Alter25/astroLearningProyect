@@ -1,13 +1,14 @@
 ---
 import "../styles/global.css";
 import Sidebar from "../components/react/Sidebar";
+
 ---
 <div class="w-full h-screen py-3.5 flex flex-col">
   <header class="flex justify-center w-full border p-2">
     <span class="text-4xl text-emerald-600">Hola</span>
   </header>
   <div class="flex-1 flex">
-    <Sidebar title="Menu"/>
+    <Sidebar title="Menu" client:load/>
     <slot/>
   </div>
   <footer class="h-fit py-4 flex justify-center">

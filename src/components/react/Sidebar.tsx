@@ -1,9 +1,5 @@
 import { useState } from "react";
-
-interface Link {
-  href: string;
-  text: string;
-}
+import type { Link } from "../../types/types";
 
 interface Props {
   title: string;
@@ -12,15 +8,18 @@ interface Props {
 
 export default function Sidebar({ title, links }: Props) {
   const [isVisible, setIsVisible] = useState(false);
+  const onClick = () => {
+    setIsVisible(!isVisible);
+    console.log(isVisible);
+  };
   return (
-    <aside className={`w-[${isVisible ? "20" : "0"}px]`}>
+    <aside className={`${isVisible ? "w-50" : "w-fit"} h-full border`}>
       <div className="h-full flex items-center gap-0">
-        <h2></h2>
         <nav>
           <ul>
             {links &&
               links.map((link) => {
-                return (
+                return ( 
                   <li>
                     <a href={link.href}>{link.text}</a>
                   </li>
@@ -28,11 +27,8 @@ export default function Sidebar({ title, links }: Props) {
               })}
           </ul>
         </nav>
-        <div>
-          <button
-            onClick={() => setIsVisible(!isVisible)}
-            className="hover:cursor-pointer"
-          >
+        <div className="h-full">
+          <button onClick={onClick} className="hover:cursor-pointer h-full">
             &gt;
           </button>
         </div>
