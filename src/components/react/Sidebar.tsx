@@ -1,8 +1,6 @@
 import { useState } from "react";
 import type { ReactNode } from "react";
 import type { Link } from "../../types/types";
-import { isAborted } from "astro:schema";
-
 interface Props {
   title: string;
   links?: Link[];
