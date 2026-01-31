@@ -8,7 +8,8 @@ interface Props {
 }
 
 export default function Sidebar({ title, links }: Props) {
-  return (
+  const { show, toggle } = useStoreBar();
+  return show ? (
     <aside className="w-fit h-full bg-purple-950 border">
       <div className="h-full w-50 flex justify-end">
         <nav className="mx-auto mt-4">
@@ -25,5 +26,7 @@ export default function Sidebar({ title, links }: Props) {
         </nav>
       </div>
     </aside>
+  ) : (
+    <></>
   );
 }

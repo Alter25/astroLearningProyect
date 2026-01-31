@@ -1,12 +1,21 @@
 ---
 import "../styles/global.css";
 import Sidebar from "../components/react/Sidebar";
+import ButtonBar from "../components/react/ButtonBar";
 import type { Link } from "../types/types";
+import menuIcon from "../../public/icons/menu.svg";
 const links:Link[] = [{href:"https://youtube.com",text:"Youtube"},{href:"https://jk.anime.net",text:"JkAnime"}]
 ---
 <div class="w-full h-screen flex flex-col">
-  <header class="flex justify-center w-screen border p-2">
-    <h1 class="text-4xl text-emerald-600">Holi</h1>
+  <header class="flex justify-center items-center h-fit w-screen border p-2">
+    <div class="flex-1">
+      <ButtonBar client:load>
+        <img src="/public/Icons/menu.svg" alt="menu icon">
+      </ButtonBar>
+    </div>
+    <div class="flex-1">
+      <h1 class="text-4xl text-emerald-600">Holi</h1>
+    </div>
   </header>
   <div class="flex-1 flex">
     <Sidebar title="Menu" links={links} client:load/>
