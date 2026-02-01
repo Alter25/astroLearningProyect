@@ -1,6 +1,6 @@
 import { useState } from "react";
-import type { ReactNode } from "react";
 import type { Link } from "../../types/types";
+import ToggleList from "./ToggleList";
 import { useStoreBar } from "../../store/store";
 interface Props {
   title: string;
@@ -20,7 +20,9 @@ export default function Sidebar({ title = "sideBar", links }: Props) {
             links.map((link, index) => {
               return (
                 <li key={index} className="flex justify-center">
-                  <a href={link.href}>{link.text}</a>
+                  <ToggleList>
+                    <a href={link.href}>{link.text}</a>
+                  </ToggleList>
                 </li>
               );
             })}
