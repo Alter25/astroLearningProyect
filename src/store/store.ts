@@ -5,7 +5,7 @@ interface StoreBar {
   toggle: () => void;
 }
 export const useStoreBar = create<StoreBar>((set) => ({
-  show: false,
+  show: true,
   toggle: () =>
     set((state) => ({
       show: !state.show,
