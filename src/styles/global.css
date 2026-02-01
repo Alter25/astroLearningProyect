@@ -2,3 +2,14 @@
 *{
   box-sizing: border-box;
 }
+a{
+  &:hover{
+    cursor:pointer;
+    text-decoration: underline;
+  }
+}
+button{
+  &:hover{
+    cursor:pointer;
+  }
+}
