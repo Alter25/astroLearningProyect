@@ -10,7 +10,7 @@ interface Props {
 export default function Sidebar({ title = "sideBar", links }: Props) {
   const { show, toggle } = useStoreBar();
   return show ? (
-    <aside className="min-w-60 flex flex-col items-center py-2 px-3 border">
+    <aside className="min-w-60 flex flex-col items-center py-2 px-3">
       <div className="w-full flex justify-center">
         <h1>{title}</h1>
       </div>

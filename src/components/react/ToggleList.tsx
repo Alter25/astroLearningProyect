@@ -27,17 +27,17 @@ const TitleBlock = ({ title = "empty", icon }: blockProps) => {
 };
 
 export default function ToggleList({ children, title }: toggleProps) {
-  const [visible, setIsVisible] = useState(false);
+  const [visible, setIsVisible] = useState(true);
 
   return (
-    <div className="w-full my-1 p-1 border">
+    <div className="w-full my-1 p-1">
       {visible ? (
-        <div className="">
+        <div>
           <TitleBlock
             title={title}
             icon={{ value: visible, f: setIsVisible }}
           />
-          {children}
+          <div className="px-4">{children}</div>
         </div>
       ) : (
         <TitleBlock title={title} icon={{ value: visible, f: setIsVisible }} />
