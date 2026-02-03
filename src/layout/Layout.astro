@@ -3,8 +3,7 @@ import "../styles/global.css";
 import Sidebar from "../components/react/Sidebar";
 import ButtonBar from "../components/react/ButtonBar";
 import type { Link } from "../types/types";
-import menuIcon from "../../public/icons/menu.svg";
-const links:Link[] = [{href:"https://youtube.com",text:"Youtube"},{href:"/about",text:"about"}]
+const {links} = Astro.props;
 ---
 <div class="w-full h-screen flex flex-col">
   <header class="flex justify-between items-center h-fit w-screen  p-2">

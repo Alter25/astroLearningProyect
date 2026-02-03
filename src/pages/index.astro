@@ -1,5 +1,7 @@
 ---
 import Layout from "../layout/Layout.astro"
+import type { Link } from "../types/types";
+const links:Link[] = [{href:"https://youtube.com",text:"Youtube"},{href:"/about",text:"about"}]
 ---
 
 <html lang="en">
@@ -12,7 +14,6 @@ import Layout from "../layout/Layout.astro"
 		<title>Astro</title>
 	</head>
 	<body class="bg-slate-800 text-white">
-		<Layout>
-		</Layout>
+		<Layout links={links}/>
 	</body>
 </html>
