@@ -1,7 +1,6 @@
 ---
 import Layout from "../layout/Layout.astro"
 import type { Link } from "../types/types";
-const links:Link[] = [{href:"https://youtube.com",text:"Youtube"},{href:"/about",text:"about"}]
 ---
 
 <html lang="en">
@@ -14,6 +13,18 @@ const links:Link[] = [{href:"https://youtube.com",text:"Youtube"},{href:"/about"
 		<title>Astro</title>
 	</head>
 	<body class="bg-slate-800 text-white">
-		<Layout links={links}/>
+		<Layout>
+			<div class="w-full">
+				<section class="ml-12 mb-4">
+					<h1 class="text-5xl">Bienvenido.</h1>
+				</section>
+				<section>
+					<p class="text-xl">Aquí pondré unas cards</p>
+				</section>
+				<section class="w-full flex justify-center my-8">
+					<p class="text-xl">A partir de aquí mostrare las tecnologías que están en uso para la creación de éste proyecto de practica.</p>
+				</section>
+			</div>
+		</Layout>
 	</body>
 </html>
