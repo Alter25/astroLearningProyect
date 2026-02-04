@@ -1,15 +1,88 @@
 @import "tailwindcss";
-*{
+
+* {
   box-sizing: border-box;
 }
-a{
-  &:hover{
-    cursor:pointer;
+
+a {
+  &:hover {
+    cursor: pointer;
     text-decoration: underline;
   }
 }
-button{
-  &:hover{
-    cursor:pointer;
+
+button {
+  &:hover {
+    cursor: pointer;
   }
+}
+
+@theme {
+  /* Tema Claro */
+  --color-primary-50: #f5f6fb;
+  --color-primary-100: #e8eaf6;
+  --color-primary-200: #d1d5ed;
+  --color-primary-300: #babde5;
+  --color-primary-400: #a3a6dd;
+  --color-primary-500: #8c8fd5;
+  --color-primary-600: #7578cd;
+  --color-primary-700: #5e61c5;
+  --color-primary-800: #505bbb;
+  --color-primary-900: #3a40a0;
+
+  --color-accent-50: #f6f6fa;
+  --color-accent-100: #ececf5;
+  --color-accent-200: #d9d9eb;
+  --color-accent-300: #c6c6e1;
+  --color-accent-400: #b3b3d7;
+  --color-accent-500: #a0a0cd;
+  --color-accent-600: #8d8dc3;
+  --color-accent-700: #7a7ab9;
+  --color-accent-800: #565c91;
+  --color-accent-900: #424677;
+
+  --color-success-50: #f3f5ff;
+  --color-success-100: #e7ebff;
+  --color-success-200: #cfd7ff;
+  --color-success-300: #b7c3ff;
+  --color-success-400: #9fafff;
+  --color-success-500: #879bff;
+  --color-success-600: #6f87ff;
+  --color-success-700: #5773ff;
+  --color-success-800: #3c4de6;
+  --color-success-900: #2e3dcc;
+
+  /* Tema Oscuro */
+  --color-dark-50: #e7e8ed;
+  --color-dark-100: #cfd0db;
+  --color-dark-200: #b7b9c7;
+  --color-dark-300: #9fa2b3;
+  --color-dark-400: #878a9f;
+  --color-dark-500: #6f728b;
+  --color-dark-600: #575a77;
+  --color-dark-700: #3f4263;
+  --color-dark-800: #4e5066;
+  --color-dark-900: #3a3c4a;
+
+  --color-charcoal-50: #e7e7eb;
+  --color-charcoal-100: #cfcfd7;
+  --color-charcoal-200: #b7b7c3;
+  --color-charcoal-300: #9f9faf;
+  --color-charcoal-400: #87879b;
+  --color-charcoal-500: #6f6f87;
+  --color-charcoal-600: #575773;
+  --color-charcoal-700: #3f3f5f;
+  --color-charcoal-800: #3c3d4c;
+  --color-charcoal-900: #2e2e38;
+
+  --color-midnight-50: #e6e6ea;
+  --color-midnight-100: #ccccd5;
+  --color-midnight-200: #b3b3c0;
+  --color-midnight-300: #9999ab;
+  --color-midnight-400: #808096;
+  --color-midnight-500: #666681;
+  --color-midnight-600: #4d4d6c;
+  --color-midnight-700: #333357;
+  --color-midnight-800: #242633;
+  --color-midnight-900: #1c1c28;
 }
