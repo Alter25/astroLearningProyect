@@ -20,7 +20,9 @@ const TitleBlock = ({ title = "empty", icon }: blockProps) => {
     <div className="w-full h-8 flex justify-evenly">
       <span className="flex-1 ml-1">{title}</span>
       <button onClick={() => icon?.f(!icon.value)}>
-        <DropIcon show={icon?.value} />
+        <span>
+          <DropIcon show={icon?.value} />
+        </span>
       </button>
     </div>
   );

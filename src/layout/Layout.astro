@@ -3,6 +3,8 @@ import "../styles/global.css";
 import Sidebar from "../components/react/Sidebar";
 import ButtonBar from "../components/react/ButtonBar";
 import type { Link } from "../types/types";
+const pathName = Astro.url.pathname;
+const title = pathName === "/" ? "Home" : pathName.slice(1);
 const links:Link[] = [{href:"https://youtube.com",text:"Youtube"},{href:"/about",text:"about"}]
 ---
 <!DOCTYPE html>
@@ -24,7 +26,7 @@ const links:Link[] = [{href:"https://youtube.com",text:"Youtube"},{href:"/about"
         <a href="/"><img src="/public/Icons/home.svg" alt="home"></a>
       </div>
       <div class="  flex justify-center">
-        <h1 class="text-4xl text-emerald-600">Holi</h1>
+        <h1 class="text-4xl text-emerald-600">{title}</h1>
       </div>
       <div class="">
         x
