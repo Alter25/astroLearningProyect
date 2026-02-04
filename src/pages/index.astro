@@ -3,28 +3,10 @@ import Layout from "../layout/Layout.astro"
 import type { Link } from "../types/types";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body class="bg-slate-800 text-white">
-		<Layout>
-			<div class="w-full">
-				<section class="ml-12 mb-4">
-					<h1 class="text-5xl">Bienvenido.</h1>
-				</section>
-				<section>
-					<p class="text-xl">Aquí pondré unas cards</p>
-				</section>
-				<section class="w-full flex justify-center my-8">
-					<p class="text-xl">A partir de aquí mostrare las tecnologías que están en uso para la creación de éste proyecto de practica.</p>
-				</section>
-			</div>
-		</Layout>
-	</body>
-</html>
+	<Layout>
+		<main>
+			<h1>
+				Hola
+			</h1>
+		</main>
+	</Layout>
