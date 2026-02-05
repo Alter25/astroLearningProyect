@@ -25,7 +25,7 @@ export default function Sidebar({ title = "sideBar", links }: Props) {
           exit="exit"
           variants={variants}
           transition={{ type: "tween", duration: 0.25 }}
-          className="min-w-60 flex flex-col items-center py-2 px-3"
+          className="min-w-60 flex flex-col items-center py-2 px-3 bg-accent-600 border-2 rounded-2xl border-accent-900"
         >
           <div className="w-full flex justify-center">
             <h1>{title}</h1>
