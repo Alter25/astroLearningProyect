@@ -4,6 +4,7 @@ import React, {
   type ReactNode,
   type SetStateAction,
 } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import DropIcon from "./DropIcon";
 
 interface toggleProps {
@@ -30,19 +31,29 @@ const TitleBlock = ({ title = "empty", icon }: blockProps) => {
 
 export default function ToggleList({ children, title }: toggleProps) {
   const [visible, setIsVisible] = useState(true);
-
+  const animas = {
+    hidden: {
+      opacity: 0,
+      height: 0,
+    },
+    visible: {
+      opacity: 1,
+      height: "auto",
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
     <div className="w-full my-1 p-1">
-      {visible ? (
-        <div>
-          <TitleBlock
-            title={title}
-            icon={{ value: visible, f: setIsVisible }}
-          />
-          <div className="px-4">{children}</div>
-        </div>
-      ) : (
-        <TitleBlock title={title} icon={{ value: visible, f: setIsVisible }} />
+      <TitleBlock title={title} icon={{ value: visible, f: setIsVisible }} />
+      {visible && (
+        <AnimatePresence>
+          <motion.div animate={animas} className="border">
+            <div className="px-4 border border-red-100">{children}</div>
+          </motion.div>
+        </AnimatePresence>
       )}
     </div>
   );
