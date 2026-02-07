@@ -31,14 +31,14 @@ const TitleBlock = ({ title = "empty", icon }: blockProps) => {
 
 const animasVariants = {
   hidden: {
-    opacity: 0,
+    // opacity: 0,
     height: 0,
   },
   visible: {
     opacity: 1,
     height: "auto",
     transition: {
-      duration: 0.3,
+      duration: 0.1,
       ease: "easeInOut",
     },
   },
