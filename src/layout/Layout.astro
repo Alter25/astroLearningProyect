@@ -5,12 +5,11 @@ import ButtonBar from "../components/react/ButtonBar";
 import type { Link } from "../types/types";
 const pathName = Astro.url.pathname;
 const title = pathName === "/" ? "Home" : pathName.slice(1);
-const links:Link[] = [{href:"https://youtube.com",text:"Youtube"},{href:"/about",text:"about"}]
+const links:Link[] = [{href:"/task",text:"Tasks"},{href:"/about",text:"about"}]
 ---
 <!DOCTYPE html>
 <html lang="es">
   <head>
-		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="viewport" content="width=device-width" />

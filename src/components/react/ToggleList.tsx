@@ -19,8 +19,11 @@ interface blockProps {
 const TitleBlock = ({ title = "empty", icon }: blockProps) => {
   return (
     <div className="w-full h-8 flex justify-evenly">
-      <span className="flex-1 ml-1">{title}</span>
-      <button onClick={() => icon?.f((prev) => !prev)}>
+      <button
+        className="flex w-full justify-evenly"
+        onClick={() => icon?.f((prev) => !prev)}
+      >
+        <span className="flex-1 ml-1">{title}</span>
         <span>
           <DropIcon show={icon?.value} />
         </span>
@@ -45,7 +48,7 @@ const animasVariants = {
 };
 
 export default function ToggleList({ children, title }: toggleProps) {
-  const [visible, setIsVisible] = useState(true);
+  const [visible, setIsVisible] = useState(false);
 
   return (
     <div className="w-full my-1 p-1">

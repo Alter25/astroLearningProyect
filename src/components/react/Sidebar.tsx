@@ -12,7 +12,11 @@ export default function Sidebar({ title = "sideBar", links }: Props) {
   const { show, toggle } = useStoreBar();
   const variants = {
     hidden: { x: -260, opacity: 0 },
-    visible: { x: 0, opacity: 1 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: {},
+    },
     exit: { x: -260, opacity: 0 },
   };
   return (
