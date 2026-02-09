@@ -18,13 +18,13 @@ interface blockProps {
 
 const TitleBlock = ({ title = "empty", icon }: blockProps) => {
   return (
-    <div className="w-full h-8 flex justify-evenly">
+    <div className="w-full h-8 flex ">
       <button
-        className="flex w-full justify-evenly"
+        className="flex w-full hover:cursor-pointer"
         onClick={() => icon?.f((prev) => !prev)}
       >
-        <span className="flex-1 ml-1">{title}</span>
-        <span>
+        <span className="flex-1 text-start ml-2 ">{title}</span>
+        <span className="">
           <DropIcon show={icon?.value} />
         </span>
       </button>
@@ -32,7 +32,7 @@ const TitleBlock = ({ title = "empty", icon }: blockProps) => {
   );
 };
 
-const animasVariants = {
+const variantsContainer = {
   hidden: {
     // opacity: 0,
     height: 0,
@@ -41,8 +41,8 @@ const animasVariants = {
     opacity: 1,
     height: "auto",
     transition: {
-      duration: 0.1,
-      ease: "easeInOut",
+      type: "tween",
+      duration: 0.4,
     },
   },
 };
@@ -56,7 +56,7 @@ export default function ToggleList({ children, title }: toggleProps) {
       {visible && (
         <AnimatePresence>
           <motion.div
-            variants={animasVariants}
+            variants={variantsContainer}
             initial="hidden"
             animate="visible"
             className="border"

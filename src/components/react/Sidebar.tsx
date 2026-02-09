@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import type { Link } from "../../types/types";
+import type { toggleLink } from "../../types/types";
 import ToggleList from "./ToggleList";
 import { useStoreBar } from "../../store/store";
 interface Props {
   title: string;
-  links?: Link[];
+  links?: toggleLink[];
 }
 
 export default function Sidebar({ title = "sideBar", links }: Props) {
@@ -39,8 +39,8 @@ export default function Sidebar({ title = "sideBar", links }: Props) {
               {links &&
                 links.map((link, index) => {
                   return (
-                    <li key={index} className="w-inherit flex justify-center">
-                      <ToggleList>
+                    <li key={index} className="w-inherit">
+                      <ToggleList title={link.name}>
                         <a href={link.href}>{link.text}</a>
                       </ToggleList>
                     </li>

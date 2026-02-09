@@ -2,10 +2,10 @@
 import "../styles/global.css";
 import Sidebar from "../components/react/Sidebar";
 import ButtonBar from "../components/react/ButtonBar";
-import type { Link } from "../types/types";
+import type { toggleLink } from "../types/types";
 const pathName = Astro.url.pathname;
 const title = pathName === "/" ? "Home" : pathName.slice(1);
-const links:Link[] = [{href:"/task",text:"Tasks"},{href:"/about",text:"about"}]
+const links:toggleLink[] = [{href:"/task",text:"Tasks",name:"Links"},{href:"/about",text:"about",name:"Links"}]
 ---
 <!DOCTYPE html>
 <html lang="es">
