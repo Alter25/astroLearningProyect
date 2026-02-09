@@ -29,7 +29,7 @@ export default function Sidebar({ title = "sideBar", links }: Props) {
           exit="exit"
           variants={variants}
           transition={{ type: "tween", duration: 0.25 }}
-          className="min-w-60 flex flex-col items-center py-2 px-3 bg-accent-600 border-2 rounded-2xl border-accent-900"
+          className="min-w-60 flex flex-col items-center py-2 px-3 bg-primary-200 border-2 rounded-2xl border-accent-900"
         >
           <div className="w-full flex justify-center">
             <h1>{title}</h1>
@@ -41,7 +41,12 @@ export default function Sidebar({ title = "sideBar", links }: Props) {
                   return (
                     <li key={index} className="w-inherit">
                       <ToggleList title={link.name}>
-                        <a href={link.href}>{link.text}</a>
+                        <a
+                          className="drop-shadow-xl drop-shadow-accent-900"
+                          href={link.href}
+                        >
+                          {link.text}
+                        </a>
                       </ToggleList>
                     </li>
                   );

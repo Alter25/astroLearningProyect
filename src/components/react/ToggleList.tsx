@@ -59,9 +59,9 @@ export default function ToggleList({ children, title }: toggleProps) {
             variants={variantsContainer}
             initial="hidden"
             animate="visible"
-            className="border"
+            className=""
           >
-            <div className="px-4 border border-red-100">{children}</div>
+            <div className="px-4">{children}</div>
           </motion.div>
         </AnimatePresence>
       )}
