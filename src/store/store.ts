@@ -1,10 +1,11 @@
 import { create } from "zustand";
 
-interface StoreBar {
+interface toggleSwitch {
   show: boolean;
   toggle: () => void;
 }
-export const useStoreBar = create<StoreBar>((set) => ({
+
+export const useStoreBar = create<toggleSwitch>((set) => ({
   show: true,
   toggle: () =>
     set((state) => ({

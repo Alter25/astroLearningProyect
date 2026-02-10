@@ -41,7 +41,7 @@ const variantsContainer = {
     opacity: 1,
     height: "auto",
     transition: {
-      type: "tween",
+      // type: "tween",
       duration: 0.4,
     },
   },
@@ -59,7 +59,6 @@ export default function ToggleList({ children, title }: toggleProps) {
             variants={variantsContainer}
             initial="hidden"
             animate="visible"
-            className=""
           >
             <div className="px-4">{children}</div>
           </motion.div>
