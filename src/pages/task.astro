@@ -1,18 +1,23 @@
 ---
 import Layout from "../layout/Layout.astro";
 import Button from "../components/react/Button"
-
+import TaskListWrapper from "../components/react/TaskListWrapper";
 
 
 
 ---
 
 <Layout>
-  <div class="mx-2 w-full h-full border">
+  <div class="flex flex-col mx-2 w-full h-full">
     <section class="m-1 border h-10 flex rounded-md bg-primary-700 justify-between px-2">
       <Button client:load  clas="px-8 py-0 border rounded-lg bg-accent-600">New</Button>
       <div class="flex relative">
       </div>
+    </section>
+    <section class="border w-full h-full p-6">
+      <TaskListWrapper>
+        hoa
+      </TaskListWrapper>
     </section>
   </div>
 </Layout>
