@@ -31,7 +31,7 @@ export default function TaskListWrapper() {
    },[])
 
   return <section className="w-screen h-full">
-    <ul className="grid grid-cols-min gap-6">
+    <ul className="grid grid-cols-3 gap-6">
       {
         listaCartas?.results.map(character => (
           <li key={character.id}><Card  character={ character}/></li>
