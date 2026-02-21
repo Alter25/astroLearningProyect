@@ -30,13 +30,12 @@ export default function TaskListWrapper() {
     fetchData();
    },[])
 
-  return <section className="w-screen h-full">
-    <ul className="grid grid-cols-3 gap-6">
+  return <section className="w-fit h-full">
+    <ul className="flex flex-wrap">
       {
         listaCartas?.results.map(character => (
-          <li key={character.id}><Card  character={ character}/></li>
+          <li className="m-2" key={character.id}><Card  character={ character}/></li>
         ))
-        // listaCartas.map()
       }
     </ul>
   </section>
