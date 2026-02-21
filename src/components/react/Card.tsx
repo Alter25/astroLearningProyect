@@ -1,16 +1,18 @@
 
 interface Props{
-  
+  title: string;
+  imgUrl?: string;
+  description: string;
 }
 
-export default function Card({ }) {
+export default function Card({title,imgUrl,description }:Props) {
   return <article className="border w-40 h-50 rounded-xl">
     <section>
-      <h2></h2>
-      <img src="" alt="" />
+      <h2>{title}</h2>
+      <img src={imgUrl} alt="" />
     </section>
     <section>
-      <p></p>
+      <p>{description}</p>
     </section>
   </article>
 }
