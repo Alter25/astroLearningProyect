@@ -1,18 +1,19 @@
+import type { Character } from "../../types/types";
 
 interface Props{
-  title: string;
-  imgUrl?: string;
-  description: string;
+  character: Character;
 }
 
-export default function Card({title,imgUrl,description }:Props) {
-  return <article className="border w-40 h-50 rounded-xl">
+export default function Card({ character }: Props) {
+  const { name, status, gender, origin, image } = character;
+  
+  return <article className="border w-40 h-60 flex flex-col justify-center rounded-xl">
     <section>
-      <h2>{title}</h2>
-      <img src={imgUrl} alt="" />
+      <h2>{name}</h2>
+      <img src={image} alt="" />
     </section>
     <section>
-      <p>{description}</p>
+      <p>{origin.name}</p>
     </section>
   </article>
 }

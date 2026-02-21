@@ -1,11 +1,12 @@
 import {useState, useEffect } from "react";
 import Card from "./Card";
+import type { ApiResponse } from "../../types/types";
 
 
 const ApiUrl = 'https://rickandmortyapi.com/api/character';
 
-export default function TaskListWrapper({ }) {
-  const [listaCartas,setListaCartas] = useState<any>();
+export default function TaskListWrapper() {
+  const [listaCartas,setListaCartas] = useState<ApiResponse>();
   
   async function getData() {
     try {
@@ -22,13 +23,20 @@ export default function TaskListWrapper({ }) {
   }
 
   useEffect(() => {
-    setListaCartas(getData());
+    const fetchData = async () => {
+      const data = await getData();
+      setListaCartas(data);
+    }
+    fetchData();
    },[])
 
-  return <section>
-    <ul>
+  return <section className="w-screen h-full">
+    <ul className="grid grid-cols-min gap-6">
       {
-        listaCartas.map()
+        listaCartas?.results.map(character => (
+          <li key={character.id}><Card  character={ character}/></li>
+        ))
+        // listaCartas.map()
       }
     </ul>
   </section>
